@@ -91,11 +91,6 @@ img {
     background: rgba(49, 95, 159, 0.20);
 }
 
-
-/* ============================================================
-   3. TOP BAR
-   ============================================================ */
-
 .top-bar {
     position: fixed;
 
@@ -148,9 +143,6 @@ img {
     letter-spacing: 0.04em;
 }
 
-
-/* ---------- Top Buttons ---------- */
-
 .top-btn {
     flex: 1;
 
@@ -189,8 +181,6 @@ img {
 .top-btn:active {
     transform: translateY(2px);
 }
-
-
 
 .lang-menu-wrapper {
     position: fixed;
@@ -958,33 +948,6 @@ canvas {
     color: var(--tree-ink);
     font-size: 9px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #node-tooltip strong {
     display: block;
 
