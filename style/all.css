@@ -90,44 +90,36 @@ img {
 ::selection {
     background: rgba(49, 95, 159, 0.20);
 }
+
 .top-bar {
     position: fixed;
 
-    top: max(2px, var(--safe-top));
+    top: max(px, var(--safe-top));
     left: 50%;
 
-    width: min(820px, calc(100% - 18px));
-    height: 80px;
-
+    width: min(800px, calc(100% - 18px));
+    height: 70px;
     transform: translateX(-50%);
-
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-
     padding: 0 14px 12px;
-
     gap: 12px;
-
     background: rgba(255, 255, 255, 0.96);
-
     border: 1px solid rgba(255, 255, 255, 0.94);
     border-radius: 0 0 32px 32px;
-
     box-shadow:
         0 12px 28px rgba(34, 75, 55, 0.16);
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
     z-index: 10000;
 }
-
 
 .top-bar::before {
     content: "TEK RAJ KOIRALA";
     position: absolute;
-    top: 1px;
+    top: 0px;
     left: 4px;
     display: flex;
     align-items: center;
@@ -143,32 +135,17 @@ img {
 }
 
 .top-btn {
-    flex: 1;
-
     min-height: 4px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 1px 1px;
-
-    border: 1px solid var(--app-line);
-    border-radius: 13px;
-
+    justify-content: var(--safe-bottom);
+    
+    gap: 50px;
+    border: 2px solid var(--app-line);
+    border-radius: 9px;
     background: #f5f8fd;
-
-    color: var(--app-ink);
-
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
 
     text-decoration: none;
-
-    transition:
-        transform 0.15s ease,
-        background 0.2s ease,
-        color 0.2s ease;
 }
 
 .top-btn:hover,
@@ -185,13 +162,12 @@ img {
 
 .lang-menu-wrapper {
     position: fixed;
-    top: 27px;
-    left: max(23px, calc((100vw - 780px) / 2));
-    font-size: 10px;
+    top: 42px;
+    left: max(30px, calc((100vw - 780px) / 2));
+    font-size: 9px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
     z-index: 10001;
 }
 .lang-trigger-btn {
@@ -218,7 +194,7 @@ img {
     box-shadow:
         0 5px 12px rgba(69, 83, 106, 0.18);
 
-    font-size: 13px;
+    font-size: 10px;
 
     white-space: nowrap;
 
@@ -303,28 +279,20 @@ img {
 .side-icons {
     position: fixed;
 
-    top: 4px;
+    top: 2px;
 
     right: max(
-        85px,
+        50px,
         calc((100vw - 780px) / 3 + 150px)
     );
 
     display: flex;
     flex-direction: row;
-
-    gap: 45px;
-
+    gap: 12px;
     padding: 0;
-
     background: transparent;
-
-    border: 0;
-
     box-shadow: none;
-
     backdrop-filter: none;
-
     z-index: 10002;
 }
 
@@ -335,7 +303,7 @@ img {
     align-items: center;
     justify-content: center;
     border: 2px solid #222;
-    border-radius: 50%;
+    border-radius: 9px;
     background: #eee4d5;
     text-decoration: none;
     transition:
@@ -358,10 +326,10 @@ img {
 .back-to-work {
     position: fixed;
 
-    top: 4px;
+    top: 2px;
 
     right: max(
-        18px,
+        12px,
         calc((100vw - 780px) / 2)
     );
 
@@ -373,7 +341,7 @@ img {
     justify-content: center;
 
     border: 2px solid #222;
-    border-radius: 18px;
+    border-radius: 6px;
 
     background: #d6d2c7;
 
@@ -617,7 +585,7 @@ img {
     color: #506480;
 
     cursor: pointer;
-
+    text-decoration: none;
     font-size: 22px;
     transition:
         background 0.18s ease,
@@ -929,9 +897,9 @@ canvas {
 }
 #node-tooltip {
     position: fixed !important;
-    top: auto !important;
-    bottom: 85px !important;
-    left: 13px !important;
+    top: 85px !important;
+    bottom: auto !important;
+    right: 18px !important;
     z-index: 11000;
     max-width:
         min(90vw, 410px);
@@ -944,33 +912,6 @@ canvas {
     color: var(--tree-ink);
     font-size: 9px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #node-tooltip strong {
     display: block;
 
