@@ -107,34 +107,6 @@ button{
   z-index:10;
 }
 
-
-.topbar h3{
-  font-weight:600;
-
-  font-size:1.15rem;
-
-  color:var(--ink);
-
-  letter-spacing:-.2px;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:8px;
-
-  min-width:0;
-}
-
-
-.topbar h3 i{
-  color:#45557a;
-
-  font-size:.85rem;
-
-  flex-shrink:0;
-}
-
 #posts{
   width:100%;
 
@@ -718,5 +690,58 @@ button{
 .social-option{
   min-height:74px;
   }
+
+  .header-back {
+    position: fixed;
+
+    right: max(
+        20px,
+        calc((100vw - 780px) / 2)
+    );
+
+    width: 25px;
+    height: 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #222;
+    border-radius: 6px;
+
+    background: #d6d2c7;
+
+    color: #111;
+
+    box-shadow: none;
+
+    font-size: 0;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    z-index: 10003;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.header-back::before {
+    content: "←";
+
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.header-back:hover {
+    background: #c9c5ba;
+    transform: translateY(-2px);
+}
+
+.header-back:active {
+    transform: scale(0.92);
+}
 
 
